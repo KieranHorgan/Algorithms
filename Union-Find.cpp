@@ -17,10 +17,8 @@ public:
 		for(int i = 0; i < N; i++) parent[i] = i;
 	}
 	ll findSet(ll i) {
-		while(i != parent[i]) {
-			parent[i] = parent[parent[i]]; // Path compression
-			i = parent[i];
-		}
+		if(i!=parent[i])
+			return parent[i] = findSet(parent[i]);
 		return i;
 	}
 	bool isSameSet(ll i, ll j) { return findSet(i) == findSet(j); }
