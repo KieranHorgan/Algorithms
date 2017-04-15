@@ -23,11 +23,7 @@ public:
 		}
 		return i;
 	}
-
-	bool isSameSet(ll i, ll j) {
-		return findSet(i) == findSet(j);
-	}
-
+	bool isSameSet(ll i, ll j) { return findSet(i) == findSet(j); }
 	void mergeSet(ll i, ll j) {
 		ll x = findSet(i);
 		ll y = findSet(j);
@@ -37,10 +33,7 @@ public:
 		sz[x]+= sz[y];
 		numberOfComponents--;
 	}
-
-	ll count() {
-		return numberOfComponents;
-	}
+	ll count() { return numberOfComponents; }
 };
 
 int main() {
