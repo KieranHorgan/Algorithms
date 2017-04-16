@@ -17,7 +17,7 @@ void Kahn() {
 			inDegree[j]++;
 
 	queue<ll> q;
-	for(int i = 1; i <= n; i++)
+	for(int i = 0; i < n; i++)
 		if(!inDegree[i])
 			q.push(i);
 
@@ -39,5 +39,5 @@ void Kahn() {
 }
 
 int main() {
-	
+
 }
