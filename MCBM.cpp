@@ -12,7 +12,7 @@ ll MCBM(ll u) {
 	if(visited[u]++) return 0;
 
 	for(auto v: AdjList[u]) 
-		if(match[v] == -1 || MCBM(match[u])) {
+		if(match[v] == -1 || MCBM(match[v])) {
 			match[v] = u;
 			return 1;
 		}
