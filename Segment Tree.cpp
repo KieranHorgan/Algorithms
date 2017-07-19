@@ -10,7 +10,7 @@ vector<int> a, s;
 int op(int l, int r) {
 //	return l + r;										Range Sum
 //	return l==-1?r:r==-1?l:a[l] > a[r] ? l : r;			Range Max
-k	return l==-1?r:r==-1?l:a[l] < a[r] ? l : r;	//		Range Min
+		return l==-1?r:r==-1?l:a[l] < a[r] ? l : r;	//		Range Min
 }
 
 void build(int id = 1, int l = 0, int r = n) {
@@ -55,12 +55,12 @@ int query(int x, int y, int id = 1, int l = 0, int r = n) {
 int main() {
 	n = 10;
 	a.assign(n,0);
-	d.assign(n,-1);
+	s.assign(n,-1);
 	build();
 
 	modify(2,13);
 	modify(3,19);
 	modify(4,15);
 	modify(5,11);
-	cout << query(2,5) << endl;
+	cout << query(2,6) << endl;
 }
